@@ -1,0 +1,11 @@
+--- st.h	2022-03-13 02:45:34.586842452 +0400
++++ st.h	2022-03-13 02:45:34.586842452 +0400
+@@ -77,6 +77,8 @@
+ 	const char *s;
+ } Arg;
+ 
++void autocomplete (const Arg *);
++
+ void die(const char *, ...);
+ void redraw(void);
+ void draw(void);
