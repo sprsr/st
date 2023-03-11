@@ -1,0 +1,13 @@
+--- x.c
++++ x.c
+@@ -1126,8 +1139,8 @@ xinit(int cols, int rows)
+ 	if (!FcInit())
+ 		die("could not init fontconfig.\n");
+ 
+-	usedfont = (opt_font == NULL)? font : opt_font;
+-	xloadfonts(usedfont, 0);
++	usedfont = fonts[fonts_current];
++	xloadfonts(fonts[fonts_current], 0);
+ 
+ 	/* colors */
+ 	xw.cmap = XDefaultColormap(xw.dpy, xw.scr);
